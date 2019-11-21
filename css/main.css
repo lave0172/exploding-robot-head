@@ -18,42 +18,54 @@ body {
 
   position: relative;
   padding: 3em;
+  padding-bottom: 0;
 }
 
 .robot {
   width: 320px;
+
+  position: relative;
+  margin: 0 auto;
 }
 
 .robot-body {
   width: 320px;
 
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  display: block;
 }
 
 .robot-brain {
   width: 46px;
 
   position: absolute;
-  top: 4.3em;
   left: 50%;
   transform: translateX(-50%);
+  top: -20px;
 }
 
 .robot-head-right,
 .robot-head-left {
   width: 125px;
+  position: absolute;
 }
 
-.robot-body:hover {
+.robot-head-left {
+  right: 50%;
+  top: -38px;
+}
 
-  .robot-head-right {
-    background-color: black;
-    display: none;
-  }
+.robot-head-right {
+  left: 50%;
+  top: -38px;
+}
 
-  display: none;
+.robot:hover .robot-head-left {
+  top: -38px;
+  transform: translateX(-20px);
 
+}
+
+.robot:hover .robot-head-right {
+  top: -38px;
+  transform: translateX(20px);
 }
